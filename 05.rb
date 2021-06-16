@@ -36,4 +36,13 @@ p nil.object_id
 :name.to_s
 :name.id2name
 
-
+puts (1..5).class
+puts 1.class
+puts [1,2,3,4,5].class
+puts "2".class
+puts :a.class
+puts nil.class 
+puts true.class
+puts false.class
+puts 3.14.class
+puts {name:"kk",age:18}.class
