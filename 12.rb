@@ -1,31 +1,31 @@
 # class Cat
 #     def initialize(name, age)
 #         @name = name
-#         @age = age 
+#         @age = age
 #         puts %Q(#{@name} #{@age})
 #     end
 # end
 
 # Cat.new("kit", 18)
 
-# #實體方法需要被new
-# class Cat
-#     def eat
-#         puts "eat"
-#     end
-# end
+#實體方法需要被new
+class Cat
+  def eat
+    puts "eat"
+  end
+end
 
-# #類別方法 like static method ?
-# class Dog
-#     def self.all
-#         puts "all"
-#     end
-# end
+#類別方法 like static method ?
+class Dog
+  def self.all
+    puts "all"
+  end
+end
 
-# k = Cat.new("n", 21)
-# k.eat
+k = Cat.new("n", 21)
+k.eat
 
-# Dog.all
+Dog.all
 
 =begin
 在ruby世界裡沒有get set這東西!只有方法
@@ -33,36 +33,37 @@
 
 #實體變數
 class Apple
-    @name = 0
-    def initialize(n=0)
-        @name = n
-        @name +=1
-    end
+  @name = 0
 
-    def say_my_name
-        return @name
-    end
+  def initialize(n = 0)
+    @name = n
+    @name += 1
+  end
 
-    # attr_reader :name # like c# get
-    # attr_writer :name # like c# set
-    attr_accessor :name # like c# get set
+  def say_my_name
+    return @name
+  end
 
-#     def name #getter
-#         return @name
-#     end
+  # attr_reader :name # like c# get
+  # attr_writer :name # like c# set
+  attr_accessor :name # like c# get set
 
-#     def name=(new_name) #setter
-#         @name = new_name
-#     end
+  #     def name #getter
+  #         return @name
+  #     end
+
+  #     def name=(new_name) #setter
+  #         @name = new_name
+  #     end
 end
 
 # apple = Apple.new("3")
 # puts apple.name
 # apple.name = "kk"
 
-5.times { 
-    apple = Apple.new 
-    puts apple.name
+5.times {
+  apple = Apple.new
+  puts apple.name
 }
 
 # puts 1+2
@@ -70,23 +71,16 @@ end
 
 #類別變數
 class Brid
-    @@counter = 0
+  @@counter = 0
 
-    def initialize
-        @@counter +=1
-    end
+  def initialize
+    @@counter += 1
+  end
 
-    def self.counter
-        return @@counter
-    end
+  def self.counter
+    return @@counter
+  end
 end
 
-5.times { Brid.new  }
+5.times { Brid.new }
 p Brid.counter
- 
-class StaticClass
-    @@foo = 1
-    def StaticClass.get_foo
-      @@foo
-    end
-  end

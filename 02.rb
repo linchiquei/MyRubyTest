@@ -1,8 +1,8 @@
 a = 10
 b = 10
 
-p a==b  #a == b ans:true
-p a===b #a == b ans:true
+p a == b  #a == b ans:true
+p a === b #a == b ans:true
 
 #only nil and false are false, 0 is not false
 #nil 等於不存在,但是他有一個class,他有記憶體位置
@@ -65,6 +65,4 @@ when 11..17
   puts "teenager"
 else
   puts "adult"
-end  
-
- 
+end

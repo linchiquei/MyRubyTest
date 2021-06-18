@@ -1,16 +1,16 @@
-#method of ruby 
-def CalTwoSum(x,y)
-  return x+y
-  rescue => exception
+#method of ruby
+def CalTwoSum(x, y)
+  return x + y
+rescue => exception
   puts "cant enter string"
 end
 
 def ToUpper(string)
-  return string.upcase  
+  return string.upcase
 end
 
-p CalTwoSum(3,6)
-p CalTwoSum(3,"6")
+p CalTwoSum(3, 6)
+p CalTwoSum(3, "6")
 p ToUpper("eye full in love 333")
 
 #可以省略return,會已最後一行為return結果
@@ -32,8 +32,8 @@ def my_method(a, b, c, options = {})
   puts "testing"
 end
 
-my_method(1,2,3,{a: 12, b: 13})
-my_method(1,2,3, a: 12, b: 13)
+my_method(1, 2, 3, { a: 12, b: 13 })
+my_method(1, 2, 3, a: 12, b: 13)
 
 def is_adult(age)
   age >= 18
@@ -45,5 +45,3 @@ end
 # end
 
 puts is_adult(19)
-
-
