@@ -8,8 +8,8 @@ User = "kk" #常數 const value 可以被更改
 username = "kk" #var
 $username = "kk" #public
 
-@@aa = "KK" #protecd
-@name = "kiki" #private
+@@aa = "KK"
+@name = "kiki"
 
 def sayHi
   puts "#{@name} hi!"
