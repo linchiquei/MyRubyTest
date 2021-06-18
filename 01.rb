@@ -5,8 +5,18 @@ print "hi"
 user = "kk" #變數
 User = "kk" #常數 const value 可以被更改
 
-username = "kk" #private
+username = "kk" #var
 $username = "kk" #public
+
+@@aa = "KK" #protecd
+@name = "kiki" #private
+
+def sayHi
+    puts "#{@name} hi!"
+end
+
+p @name
+sayHi
 
 a = 1
 a +- 1
