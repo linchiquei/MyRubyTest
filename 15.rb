@@ -1,4 +1,4 @@
-require 'date' # 包含DateTime
+require "date" # 包含DateTime
 
 # practice 3
 def generate_odd_numbers(n)
@@ -43,12 +43,12 @@ puts generate_order_code(1224)  # 印出 TN-0001224
 #practice 6
 
 #practice 7
-language = ["PHP", "Python", "Ruby", "Perl", "ASP", "ActionScript", "Objective-C", "Swift", "Kotlin", "Go","A"]
+language = ["PHP", "Python", "Ruby", "Perl", "ASP", "ActionScript", "Objective-C", "Swift", "Kotlin", "Go", "A"]
 
 def short_word(list)
   str = list[0]
-  list.each do |n|    
-    if(str.length > n.length)
+  list.each do |n|
+    if (str.length > n.length)
       str = n
     end
   end
@@ -62,16 +62,16 @@ def calc_age(birthday)
   now = Date.today
   before = Date.parse(birthday)
   difference_in_days = (now - before).to_i
-  (difference_in_days/365).to_i - 1
+  (difference_in_days / 365).to_i - 1
 end
 
-puts calc_age('1985/1/2')  # 印出 35
-puts calc_age('1997/8/28') # 印出 22
+puts calc_age("1985/1/2")  # 印出 35
+puts calc_age("1997/8/28") # 印出 22
 
 #practice 9
 def is_valid_company_no?(serial)
-  list=[1,2,1,2,1,2,4,1]
-  if(serial.length != 8)
+  list = [1, 2, 1, 2, 1, 2, 4, 1]
+  if (serial.length != 8)
     return "格式不符"
   else
     strlist = number_split(serial)
@@ -79,28 +79,23 @@ def is_valid_company_no?(serial)
       rulenum = list[index]
       pushnum = str * rulenum
       #list[index] = pushnum
-      list[index] = pushnum >= 10 ? number_split(pushnum.to_s).reduce(0, :+) : pushnum 
+      list[index] = pushnum >= 10 ? number_split(pushnum.to_s).reduce(0, :+) : pushnum
     end
     #p list
     adjustnum = 0
-    if(list[6] == 7)
+    if (list[6] == 7)
       adjustnum = list.sum + 1
     else
       adjustnum = list.sum
     end
     return list.sum % 10 == 0
-  end 
+  end
 end
 
 def number_split(n)
   return n.split("").map(&:to_i)
 end
 
-
 #p is_valid_company_no?('2453680')  # 印出「格式不符」字樣
-p is_valid_company_no?('24536806') # 印出 true
-p is_valid_company_no?('12222539') # 印出 false
-
-
-
-
+p is_valid_company_no?("24536806") # 印出 true
+p is_valid_company_no?("12222539") # 印出 false
